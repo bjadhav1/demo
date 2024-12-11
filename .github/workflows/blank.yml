@@ -15,4 +15,4 @@ jobs:
       - name: Test API connectivity with curl
         run: |
           echo "Checking API connectivity..."
-          curl -v -X GET "https://your-api-endpoint.com/resource" -H "Authorization: Bearer your-token"
+          curl -s -o /dev/null -w "%{http_code}" http://www.example.org/  
